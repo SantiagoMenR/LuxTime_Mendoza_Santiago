@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del home */
+
+.body-home{
+    background: #0F1C2E;
+    color: #F7F7F7;
+}
+
+hr{
+    margin: 3rem;
+}
+
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  animation: inWindow 1s ease-out backwards, cambio-fondo 15s infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 3px 9px black);
+}
+
+.banner h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 5rem;
+  text-shadow: 0 0 10px rgba(194, 194, 194, 0.781);
+  -webkit-text-stroke: 1px white;
+  user-select: none;
+  background-color: transparent;
+}
+
+.banner p{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(194, 194, 194, 0.781);
+    user-select: none;
+    background-color: transparent;
+}
+
+.banner .btn{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(194, 194, 194, 0.781);
+    user-select: none;
+    background-color: gold;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 20px gold;
+    background: #d4a62f;
+    cursor: pointer;
+}
+
+@keyframes cambio-fondo {
+  0%   { background-image: url('../assets/imagenes/img1.jpg'); }
+  33%  { background-image: url('../assets/imagenes/img2.jpg'); }
+  66%  { background-image: url('../assets/imagenes/img3.jpg'); }
+  100% { background-image: url('../assets/imagenes/img1.jpg'); }
+}
+
+@keyframes inWindow {
+  0%{transform: translateY(-100%); opacity: 0;}
+  50%{
+    transform: translateY(-50%); opacity: 0.5;}
+
+  100%{
+    transform: translateY(0); opacity: 1;
+  }
+}
+
+/* Estilos de la seccion de relojes destacados */
+
+.titulo{
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 2.7rem;
+}
+
+h1,h2,h3{
+    font-family: "Playfair Display", serif;
+}
+
+p{
+    font-family: "Lato", sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(16rem, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+.card{
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    color: #1B1B1B;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #C5A880;
+}
+
+.info{
+    background: #D1D5DB;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 15px;
+    text-shadow: 0 0 10px #C5A880;
+}
+
+.info a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    background: #C5A880;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.info a:hover{
+    box-shadow: 0 0 20px gold;
+    background: gold;
+    cursor: pointer;
+}
+.card img{
+    height: 18rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la seccion de historia */
+
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.history p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.history a{
+    text-decoration: none;
+    color: #1B1B1B;
+    padding: 1rem;
+    background: #C5A880;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1.5rem;
+}
+
+.history a:hover{
+    box-shadow: 0 0 20px gold;
+    background: gold;
+    cursor: pointer;
+}
+
+/* Estilos para la seccion de testimonios */
+
+.testimonios {
+    max-width: 45rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #0a111b;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .testimonios h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  input{
+    display: none;
+  }
+  .slides-testimonio {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 5rem;
+  }
+
+  .slide-testimonio {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  #slide-testimonio1:checked ~ .slides-testimonio #s1,
+  #slide-testimonio2:checked ~ .slides-testimonio #s2,
+  #slide-testimonio3:checked ~ .slides-testimonio #s3 {
+    opacity: 1;
+    position: relative;
+  }
+
+  .nav {
+    margin-top: 1rem;
+  }
+
+  .nav label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #slide-testimonio1:checked ~ .nav label[for="slide-testimonio1"],
+  #slide-testimonio2:checked ~ .nav label[for="slide-testimonio2"],
+  #slide-testimonio3:checked ~ .nav label[for="slide-testimonio3"] {
+    background-color: black;
+  }
+
+footer{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
