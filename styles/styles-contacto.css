@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0F1C2E;
+    color: #F7F7F7;
+}
+
+.titulo{
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+h1,h2,h3{
+    font-family: "Playfair Display", serif;
+}
+
+.contacto-form{
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgba(240, 240, 240, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.2);
+    color: #F7F7F7;
+    font-family: "Lato", sans-serif;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.contacto-form p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo {
+    text-align: left;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #1B1B1B;
+    background-color: #F7F7F7;
+}
+
+.boton-contacto button {
+    padding: 0.8rem 2rem;
+    background-color: #C5A880;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1B1B1B;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.boton-contacto button:hover {
+    background-color: gold;
+    box-shadow: 0 0 15px gold;
+}
