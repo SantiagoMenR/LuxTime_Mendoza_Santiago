@@ -137,7 +137,7 @@ h1,h2,h3{
     box-shadow: 0 0 15px #C5A880;
 }
 
-.info{
+.description{
     background: #D1D5DB;
     display: flex;
     flex-direction: column;
@@ -146,24 +146,8 @@ h1,h2,h3{
     text-shadow: 0 0 10px #C5A880;
 }
 
-.info a{
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    background: #C5A880;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.info a:hover{
-    box-shadow: 0 0 20px gold;
-    background: gold;
-    cursor: pointer;
-}
 .card img{
-    height: 18rem;
+    height: 19rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 15px;

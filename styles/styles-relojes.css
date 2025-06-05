@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0F1C2E;
+    color: #F7F7F7;
+}
+
+.titulo{
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 2.7rem;
+}
+
+h1,h2,h3{
+    font-family: "Playfair Display", serif;
+}
+
+p{
+    font-family: "Lato", sans-serif;
+}
+
+.container{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+.container img{
+    height: 25rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid gold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px gold;
+}
+
+.container .info{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.info p{
+    margin-top: 1.1rem;
+    font-size: 1rem;
+}
+
+.opcion {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Lato", sans-serif;
+}
+
+.opcion label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.opcion select {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: #F7F7F7;
+  color: #1B1B1B;
+  width: 100%;
+}
+
+.info a{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    background: #C5A880;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.info a:hover{
+    box-shadow: 0 0 20px gold;
+    background: gold;
+    cursor: pointer;
+}
+
+
