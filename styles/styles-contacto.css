@@ -82,3 +82,20 @@ form {
     background-color: gold;
     box-shadow: 0 0 15px gold;
 }
+
+@media screen and (max-width: 768px) {
+  .contacto-form {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 1rem;
+  }
+
+  .boton-contacto button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}

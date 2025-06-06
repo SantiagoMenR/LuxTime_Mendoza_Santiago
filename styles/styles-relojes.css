@@ -134,3 +134,60 @@ p{
     transform: scale(1.1);
     box-shadow: 0 0 10px gold;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    margin: 1rem 0;
+  }
+
+  .relacionados {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .relacionados .rel {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .container .reloj-pr {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Añadir estos media queries */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .container .reloj-pr {
+    width: 70%;
+    height: auto;
+  }
+
+  .container .info {
+    margin: 1.5rem 0;
+    width: 100%;
+  }
+
+  .relacionados {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .relacionados .rel {
+    height: 10rem;
+    width: 45%;
+    max-width: none;
+  }
+}
