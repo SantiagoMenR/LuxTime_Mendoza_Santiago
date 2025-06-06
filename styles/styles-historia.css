@@ -16,6 +16,7 @@ body{
     margin: 2rem 0 2rem 0;
     font-size: 2.7rem;
     font-weight: bold;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 h1,h2,h3{
@@ -26,11 +27,13 @@ h1,h2,h3{
     margin: 4rem;
     font-size: 1.2rem;
     text-align: center;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .timeline{
     position: relative;
     margin-top: 3rem;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .timeline::before {
@@ -111,26 +114,9 @@ h1,h2,h3{
 
 .galeria{
     margin: 3rem;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.galery{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(16rem, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    margin: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-}
-
-.card{
-    background: #f7f7f7;
-    border-radius: 15px;
-    padding: 1rem;
-    text-align: center;
-    color: #1B1B1B;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .card:hover{
     transform: scale(1.03);
@@ -146,16 +132,43 @@ h1,h2,h3{
     text-shadow: 0 0 10px #C5A880;
 }
 
-.card img{
-    height: 19rem;
+
+.galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem;
+    padding: 1rem; 
+    margin: 0.5rem; 
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: calc(100% - 1rem); 
+}
+
+.card {
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 0.8rem; 
+    text-align: center;
+    color: #1B1B1B;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; 
+    overflow: hidden; 
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.card img {
+    height: auto; 
+    width: 100%; 
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
-
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media screen and (max-width: 768px) {
   .timeline::before {
@@ -205,39 +218,8 @@ h1,h2,h3{
 
 }
 
-/* Modificar estas reglas en styles-historia.css */
-.galery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cambio importante */
-    gap: 1rem;
-    padding: 1rem; /* Reducir padding */
-    margin: 0.5rem; /* Reducir margen */
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    width: calc(100% - 1rem); /* Asegurar que no exceda el ancho */
-}
 
-.card {
-    background: #f7f7f7;
-    border-radius: 15px;
-    padding: 0.8rem; /* Reducir padding */
-    text-align: center;
-    color: #1B1B1B;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 100%; /* Asegurar que no exceda */
-    overflow: hidden; /* Contener contenido */
-}
 
-.card img {
-    height: auto; /* Cambio crucial - eliminar altura fija */
-    width: 100%; /* Hacer que ocupe el 100% del contenedor */
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 0.8rem;
-}
-
-/* Mejorar los media queries */
 @media screen and (max-width: 1024px) {
     .galery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

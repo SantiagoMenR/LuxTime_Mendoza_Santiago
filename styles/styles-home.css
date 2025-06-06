@@ -73,12 +73,19 @@ hr{
     border-radius: 15px;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
 }
 
 .btn:hover{
     box-shadow: 0 0 20px gold;
     background: #d4a62f;
     cursor: pointer;
+}
+
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
 }
 
 @keyframes cambio-fondo {
@@ -131,6 +138,26 @@ p{
     text-align: center;
     color: #1B1B1B;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: popIn 0.6s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .card:hover{
@@ -178,7 +205,9 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation: fadeIn 1s ease-out forwards;
 }
+
 
 .history p{
     font-size: 1.5rem;
@@ -196,6 +225,7 @@ p{
     font-weight: bold;
     font-size: 1rem;
     margin: 1.5rem;
+    animation: pulse 2s infinite;
 }
 
 .history a:hover{
@@ -216,6 +246,7 @@ p{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     margin-bottom: 5rem;
+    animation: fadeIn 1s ease-out forwards;
   }
 
   .testimonios h2 {

@@ -41,12 +41,16 @@ header {
 }
 
 /* Cada zona del header */
-.logo h1 {
+.logo a {
   font-size: 1.8rem;
   color: #f0c040;
   margin: 0;
   white-space: nowrap;
   font-family: "Playfair Display", serif;
+  user-select: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .nav-central {
@@ -63,6 +67,7 @@ header {
   transition: color 0.3s;
   padding: 0.5rem 0;
   white-space: nowrap;
+  user-select: none;
 }
 
 .nav-central a:hover {
@@ -78,6 +83,14 @@ header {
   font-weight: bold;
   transition: background-color 0.3s, box-shadow 0.3s ease;
   white-space: nowrap;
+  animation: pulse 2s infinite;
+  user-select: none;
+}
+
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
 }
 
 .contacto a:hover {
